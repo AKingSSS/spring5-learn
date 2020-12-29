@@ -1,0 +1,6 @@
+# Project exclude paths
+/spring01-ioc/target/
+/spring02-hellospring/target/
+/spring03-di/target/
+/spring05-autowire/target/
+/spring06-annation/target/

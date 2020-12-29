@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dog" class="com.aking.learn.pojo.Dog"></bean>
+    <bean id="cat" class="com.aking.learn.pojo.Cat"></bean>
+
+    <!--xml显示配置-->
+    <bean id="people" class="com.aking.learn.pojo.People">
+        <property name="dog" ref="dog"></property>
+        <property name="cat" ref="cat"></property>
+        <property name="name" value="aking"></property>
+    </bean>
+
+    <!--
+    byName： 会自动在容器上下文中和自己对象set方法后面的值对应的beanid
+    -->
+    <bean id="people2" class="com.aking.learn.pojo.People" autowire="byName">
+        <property name="name" value="qing"></property>
+    </bean>
+
+    <bean id="people3" class="com.aking.learn.pojo.People" autowire="byType">
+        <property name="name" value="kang"></property>
+    </bean>
+
+</beans>

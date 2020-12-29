@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    hello 对象是由spring创建，hello对象的属性是由spring容器设置
+    类型 变量名 =  new 类型();
+    bean = 对象，new Hello();
+    id = 变量名
+    class = new 的对象
+    property 相当于给对象的属性设置一个值
+    name 别名（可以多个,用逗号|分号|空格隔开）
+    -->
+    <bean id="hello" class="com.aking.learn.pojo.Hello" name="hello2,hello3">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="msg" value="Spring"></property>
+    </bean>
+
+    <alias name="hello" alias="helloDto"></alias>
+
+    <!-- more bean definitions go here -->
+
+</beans>

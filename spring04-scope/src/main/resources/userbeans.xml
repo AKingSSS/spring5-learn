@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--需要导入约束-->
+    <!--xmlns:p="http://www.springframework.org/schema/p"-->
+    <!--xmlns:c="http://www.springframework.org/schema/c"-->
+
+    <!--XML Shortcut with the p-namespace 属性注入-->
+    <bean id="user" class="com.aking.learn.pojo.User" p:name="qing" p:age="18"></bean>
+
+    <!--XML Shortcut with the c-namespace 构造器注入-->
+    <bean id="user2" class="com.aking.learn.pojo.User" c:name="aking" c:age="18" scope="prototype"></bean>
+
+    <!--scope 为 request，session，application只能在web中使用-->
+
+</beans>
