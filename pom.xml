@@ -15,6 +15,9 @@
         <module>spring04-scope</module>
         <module>spring05-autowire</module>
         <module>spring06-annation</module>
+        <module>spring07-anno</module>
+        <module>spring08-config</module>
+        <module>spring09-proxy</module>
     </modules>
 
     <properties>
