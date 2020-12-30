@@ -19,6 +19,7 @@
         <module>spring08-config</module>
         <module>spring09-proxy</module>
         <module>spring10-aop</module>
+        <module>spring11-mybatis</module>
     </modules>
 
     <properties>

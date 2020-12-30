@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!--备注：这里可以直接在 User 类上使用注解 @Alias-->
+        <typeAlias alias="User" type="com.aking.learn.pojo.User"/>
+    </typeAliases>
+
+    <!--数据库配置放到 spring中-->
+
+    <mappers>
+        <!-- 包扫描 接口和配置文件必须同名&&接口和它的配置类必须在同一包下-->
+        <package name="com.aking.learn.mapper"/>
+    </mappers>
+</configuration>
