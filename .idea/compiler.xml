@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring11-mybatis" />
         <module name="spring08-config" />
+        <module name="spring12-transaction" />
         <module name="spring06-annation" />
         <module name="spring04-scope" />
         <module name="spring01-ioc" />

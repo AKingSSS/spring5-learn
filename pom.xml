@@ -20,6 +20,7 @@
         <module>spring09-proxy</module>
         <module>spring10-aop</module>
         <module>spring11-mybatis</module>
+        <module>spring12-transaction</module>
     </modules>
 
     <properties>
