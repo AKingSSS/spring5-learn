@@ -18,6 +18,7 @@
         <module>spring07-anno</module>
         <module>spring08-config</module>
         <module>spring09-proxy</module>
+        <module>spring10-aop</module>
     </modules>
 
     <properties>

@@ -14,6 +14,7 @@
         <module name="spring02-hellospring" />
         <module name="spring03-di" />
         <module name="spring09-proxy" />
+        <module name="spring10-aop" />
         <module name="spring05-autowire" />
         <module name="spring07-anno" />
       </profile>
