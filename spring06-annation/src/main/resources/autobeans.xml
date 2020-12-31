@@ -10,8 +10,12 @@
     <!--注解支持-->
     <context:annotation-config/>
 
-    <bean id="dog" class="com.aking.learn.pojo.Dog" />
-    <bean id="dog1" class="com.aking.learn.pojo.Dog" />
+    <bean id="dog" class="com.aking.learn.pojo.Dog">
+        <property name="name" value="成功"></property>
+    </bean>
+    <bean id="dog1" class="com.aking.learn.pojo.Dog" >
+        <property name="name" value="胜利"></property>
+    </bean>
     <bean id="cat" class="com.aking.learn.pojo.Cat" />
     <bean id="cat1" class="com.aking.learn.pojo.Cat" />
     <bean id="people" class="com.aking.learn.pojo.People" />

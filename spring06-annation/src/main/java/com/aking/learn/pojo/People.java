@@ -33,7 +33,6 @@ public class People {
     @Resource
     private Cat cat;
     @Autowired
-    @Qualifier(value = "dog1")
     private Dog dog;
     private String name;
 }

@@ -21,5 +21,6 @@ public class MyTest {
         System.out.println(people);
         people.getCat().shout();
         people.getDog().shout();
+        System.out.println( people.getDog().getName());
     }
 }
