@@ -52,12 +52,12 @@
         <constructor-arg ref="dataSource" />
     </bean>
     <!-- 方式一： 开启事务注解 -->
-    <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
+    <tx:annotation-driven transaction-manager="transactionManager" />
     <!-- 在方法所在类上加注解 -->
 
     <!-- 方式二：结合aop实现事务-->
     <!-- 配置通知 -->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+<!--    <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
             <tx:method name="add*" propagation="REQUIRED" />
             <tx:method name="del*" propagation="REQUIRED"/>
@@ -65,13 +65,13 @@
             <tx:method name="query*" read-only="true"/>
         </tx:attributes>
     </tx:advice>
-    <!--配置事务切入-->
+    &lt;!&ndash;配置事务切入&ndash;&gt;
     <aop:config>
-        <!--切入点  -->
+        &lt;!&ndash;切入点  &ndash;&gt;
         <aop:pointcut expression="execution(* com.aking.learn.service..*.*(..))" id="pc"/>
-        <!-- 配置切面 -->
+        &lt;!&ndash; 配置切面 &ndash;&gt;
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pc" />
-    </aop:config>
+    </aop:config>-->
 
     <!--指定要扫描的包,这个包下的注解才能生效-->
     <context:component-scan base-package="com.aking.learn" />

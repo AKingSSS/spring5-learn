@@ -6,6 +6,7 @@ import com.aking.learn.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -21,9 +22,14 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void addUsers() {
-        User user = new User().setName("libai").setPwd("wangwei");
-        userMapper.addUser(user);
-        userMapper.delUser(16L);
+        try {
+            User user = new User().setName("libai").setPwd("wangwei");
+            userMapper.addUser(user);
+            userMapper.delUser(16L);
+        } catch (Exception e) {
+            throw e;
+        }
     }
 }
